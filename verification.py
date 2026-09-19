@@ -20,11 +20,11 @@ benign_flow = {
 # Ground Truth: DDoS (Assigned 0.0) - Unidirectional SYN flood, high packets
 ddos_flow = {
     "Destination Port": 80.0,
-    "Flow Duration": 3000000.0,
-    "Total Fwd Packets": 5000.0,
-    "Total Backward Packets": 0.0,
-    "Packet Length Mean": 0.0,
-    "Average Packet Size": 0.0,
+    "Flow Duration": 1413228.0,
+    "Total Fwd Packets": 3.0,
+    "Total Backward Packets": 5.0,
+    "Packet Length Mean": 1291.0,
+    "Average Packet Size": 1453.4,
 }
 
 print("Sending Ground Truth BENIGN flow (Should predict 1.0)...")
