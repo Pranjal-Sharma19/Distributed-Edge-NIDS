@@ -5,10 +5,12 @@ build/
 dist/
 wheels/
 *.egg-info
-uv.lock
-*.csv
-*.toml
-.python_version
+
 # Virtual environments
 .venv
-ids_rf_model/
+
+#configs
+mise.toml
+uv.lock
+pyproject.toml
+ids_rf_model
