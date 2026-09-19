@@ -14,3 +14,4 @@ mise.toml
 uv.lock
 pyproject.toml
 ids_rf_model
+/src
