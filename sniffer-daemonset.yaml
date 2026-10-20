@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: nids-edge-sniffer
+spec:
+  selector:
+    matchLabels:
+      app: nids-sniffer
+  template:
+    metadata:
+      labels:
+        app: nids-sniffer
+    spec:
+      hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
+      containers:
+        - name: scapy-sniffer
+          image: dio883/edge-sniffer:v1
+          securityContext:
+            privileged: true
+          resources:
+            limits:
+              memory: "150Mi"
+              cpu: "300m"
