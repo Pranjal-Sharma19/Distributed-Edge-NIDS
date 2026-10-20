@@ -27,6 +27,7 @@ df = (
     spark.readStream.format("kafka")
     .option("kafka.bootstrap.servers", "192.168.29.72:9092")
     .option("subscribe", "cic-ids-telemetry")
+    .option("startinhgOffsets", "latest")
     .load()
 )
 

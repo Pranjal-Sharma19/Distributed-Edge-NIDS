@@ -15,3 +15,6 @@ uv.lock
 pyproject.toml
 ids_rf_model
 /src
+
+#files 
+Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv

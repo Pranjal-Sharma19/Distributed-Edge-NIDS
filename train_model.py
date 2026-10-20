@@ -51,7 +51,12 @@ assembler = VectorAssembler(
 )
 assembled_df = assembler.transform(df)
 
-indexer = StringIndexer(inputCol="Label", outputCol="label_index", handleInvalid="skip")
+indexer = StringIndexer(
+    inputCol="Label",
+    outputCol="label_index",
+    stringOrderType="alphabetAsc",
+    handleInvalid="skip",
+)
 indexed_df = indexer.fit(assembled_df).transform(assembled_df)
 
 train_data, test_data = indexed_df.randomSplit([0.8, 0.2], seed=42)
